@@ -1,6 +1,7 @@
 import React from "react";
 import { useTypedSelector, useTypedDispatch } from "./store";
 import { selectTransactionsLatestToOldest, transactionFilters } from "./state";
+import { ResizeObserver } from "@juggle/resize-observer";
 import useMeasure from "react-use-measure";
 import { FixedSizeList } from "react-window";
 import { Radio } from "./Radio";
@@ -14,7 +15,9 @@ type Props = {
 };
 
 export function Transactions({ transactionClicked }: Props) {
-  const [ref, { width, height }] = useMeasure();
+  const [ref, { width, height }] = useMeasure({
+    polyfill: ResizeObserver
+  });
   const itemHeight = 100;
   const transactions = useTypedSelector(selectTransactionsLatestToOldest);
   return (

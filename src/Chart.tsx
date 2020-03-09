@@ -2,6 +2,7 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import { scaleLinear } from "d3-scale";
 import { area, curveBasis as curve } from "d3-shape";
+import { ResizeObserver } from "@juggle/resize-observer";
 import useMeasure from "react-use-measure";
 import { extent } from "d3-array";
 import { Max } from "./Layout";
@@ -17,7 +18,9 @@ type Props = {
 };
 
 export const Chart = React.memo(function({ data }: Props) {
-  const [ref, { width, height }] = useMeasure({});
+  const [ref, { width, height }] = useMeasure({
+    polyfill: ResizeObserver
+  });
   const scaleX = scaleLinear()
     .range([0, width])
     .domain([0, data.length - 1]);
