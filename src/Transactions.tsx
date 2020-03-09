@@ -14,7 +14,9 @@ type Props = {
 };
 
 export function Transactions({ transactionClicked }: Props) {
-  const [ref, { width, height }] = useMeasure();
+  const [ref, { width, height }] = useMeasure({
+    polyfill: ResizeObserver
+  });
   const itemHeight = 100;
   const transactions = useTypedSelector(selectTransactionsLatestToOldest);
   return (
