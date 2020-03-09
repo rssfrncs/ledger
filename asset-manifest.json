@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ledger/static/css/main.2af78c06.chunk.css",
-    "main.js": "/ledger/static/js/main.6f6db0db.chunk.js",
-    "main.js.map": "/ledger/static/js/main.6f6db0db.chunk.js.map",
+    "main.js": "/ledger/static/js/main.a923752c.chunk.js",
+    "main.js.map": "/ledger/static/js/main.a923752c.chunk.js.map",
     "runtime-main.js": "/ledger/static/js/runtime-main.aaed06a0.js",
     "runtime-main.js.map": "/ledger/static/js/runtime-main.aaed06a0.js.map",
-    "static/js/2.0a088f30.chunk.js": "/ledger/static/js/2.0a088f30.chunk.js",
-    "static/js/2.0a088f30.chunk.js.map": "/ledger/static/js/2.0a088f30.chunk.js.map",
+    "static/js/2.52b10900.chunk.js": "/ledger/static/js/2.52b10900.chunk.js",
+    "static/js/2.52b10900.chunk.js.map": "/ledger/static/js/2.52b10900.chunk.js.map",
     "index.html": "/ledger/index.html",
-    "precache-manifest.3f13be206e1fb3cfe0d5a910409b68ba.js": "/ledger/precache-manifest.3f13be206e1fb3cfe0d5a910409b68ba.js",
+    "precache-manifest.d20d02025f12144964318b6def0cbbe7.js": "/ledger/precache-manifest.d20d02025f12144964318b6def0cbbe7.js",
     "service-worker.js": "/ledger/service-worker.js",
     "static/css/main.2af78c06.chunk.css.map": "/ledger/static/css/main.2af78c06.chunk.css.map",
-    "static/js/2.0a088f30.chunk.js.LICENSE.txt": "/ledger/static/js/2.0a088f30.chunk.js.LICENSE.txt"
+    "static/js/2.52b10900.chunk.js.LICENSE.txt": "/ledger/static/js/2.52b10900.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.aaed06a0.js",
-    "static/js/2.0a088f30.chunk.js",
+    "static/js/2.52b10900.chunk.js",
     "static/css/main.2af78c06.chunk.css",
-    "static/js/main.6f6db0db.chunk.js"
+    "static/js/main.a923752c.chunk.js"
   ]
 }
