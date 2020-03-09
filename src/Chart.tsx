@@ -21,11 +21,9 @@ export const Chart = React.memo(function({ data }: Props) {
   const scaleX = scaleLinear()
     .range([0, width])
     .domain([0, data.length - 1]);
-  const yDomainMax = extent(data, x => x.value) as [number, number];
   const scaleY = scaleLinear()
     .range([height - 5, 5])
-    .domain(yDomainMax);
-
+    .domain(extent(data, x => x.value) as [number, number]);
   const areaFn = area<Datum>()
     .x(x => scaleX(x.step))
     .x1(x => scaleX(x.step))
@@ -53,9 +51,6 @@ export const Chart = React.memo(function({ data }: Props) {
           y1={scaleY(0)}
           y2={scaleY(0)}
         />
-        <text x={0} y={scaleY(0)}>
-          0
-        </text>
       </svg>
     </Max>
   );
