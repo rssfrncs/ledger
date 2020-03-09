@@ -1,5 +1,7 @@
 # Ledger app
 
+Lot's to discuss!
+
 ## Todo (a fair amount!)
 
 - Add e2e tests for critical flows
