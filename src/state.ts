@@ -79,7 +79,7 @@ export const selectTransactionsLatestToOldest = createSelector(
   }
 );
 
-export const selectFilteredTransactions = createSelector(
+export const selectFilteredTransactionsLatestToOldest = createSelector(
   [selectTransactionsLatestToOldest, (s: State) => s.transactionFilter],
   (transactions, filter) => {
     return filter === "all"
@@ -107,7 +107,7 @@ export const selectOverdraft = createSelector(
 );
 
 export const selectBalancesByTime = createSelector(
-  [selectFilteredTransactions],
+  [selectFilteredTransactionsLatestToOldest],
   transactions => {
     const keyFormat = "yyyy MM dd";
     const daysToDisplay = 14;

@@ -1,6 +1,9 @@
 import React from "react";
 import { useTypedSelector, useTypedDispatch } from "./store";
-import { selectTransactionsLatestToOldest, transactionFilters } from "./state";
+import {
+  selectFilteredTransactionsLatestToOldest,
+  transactionFilters
+} from "./state";
 import { ResizeObserver } from "@juggle/resize-observer";
 import useMeasure from "react-use-measure";
 import { FixedSizeList } from "react-window";
@@ -19,7 +22,9 @@ export function Transactions({ transactionClicked }: Props) {
     polyfill: ResizeObserver
   });
   const itemHeight = 100;
-  const transactions = useTypedSelector(selectTransactionsLatestToOldest);
+  const transactions = useTypedSelector(
+    selectFilteredTransactionsLatestToOldest
+  );
   return (
     <CentredMax>
       <TransactionsFilter />
