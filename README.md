@@ -9,8 +9,7 @@
   - The Reducer is tiny so it will be cheap to get good coverage.
 - Extract all styles into styled-components for runtime performance and cross browser compatibility.
   - For quicker prototyping inline (style) was used and later extracted into styled-components
-    - co
-  - Plus for consistency sake
+  - Also for consistency
 - Better UX for transaction rejection
   - It would be ideal to block any further transactions until the user has dismissed some kind of rejection UI.
 - Replace input datetime-local with anything else (such a bad ux on desktop)
