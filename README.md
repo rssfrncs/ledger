@@ -18,4 +18,13 @@ Created in around 5 hours on 09/03/2020.
 - Replace input datetime-local with anything else (such a bad ux on desktop)
 - Move static theme object to styled-components theme provider
 - Fix initial buggy animation for chart
+
   - The d3 area is always going from 0 -> height. We should check if all the day groupings are empty.
+
+## Screens
+
+![Screenshot 1](./screenshot-1.PNG) ![Screenshot 2](./screenshot-2.PNG) ![Screenshot 3](./screenshot-3.PNG)
+
+## Audit
+
+![Google Lighthouse Audit](./audit.PNG)
