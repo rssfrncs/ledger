@@ -18,8 +18,8 @@ Created in around 5 hours on 09/03/2020.
 - Replace input datetime-local with anything else (such a bad ux on desktop)
 - Move static theme object to styled-components theme provider
 - Fix initial buggy animation for chart
-
   - The d3 area is always going from 0 -> height. We should check if all the day groupings are empty.
+- Investigate the use of a service worker to enable the application to be offline first and installable.
 
 ## Screens
 
