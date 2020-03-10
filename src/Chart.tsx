@@ -27,11 +27,14 @@ export const Chart = React.memo(function({ data }: Props) {
   const scaleY = scaleLinear()
     .range([height - 5, 5])
     .domain(extent(data, x => x.value) as [number, number]);
+  // check if there are no values so that we can change how we render the area
+  // when true render zero height around scaleY(0)
+  const allZero = data.every(data => data.value === 0);
   const areaFn = area<Datum>()
     .x(x => scaleX(x.step))
     .x1(x => scaleX(x.step))
-    .y(height)
-    .y1(x => scaleY(x.value))
+    .y(allZero ? scaleY(0) : height)
+    .y1(x => (allZero ? scaleY(0) : scaleY(x.value)))
     .curve(curve);
   const { d } = useSpring({
     d: areaFn(data)
@@ -46,14 +49,7 @@ export const Chart = React.memo(function({ data }: Props) {
           </linearGradient>
         </defs>
         <animated.path fill="url(#gradient)" d={d} />
-        <line
-          stroke="#8c8c8c"
-          strokeWidth={3}
-          x1={0}
-          x2={width}
-          y1={scaleY(0)}
-          y2={scaleY(0)}
-        />
+        <rect fill="#8c8c8c" height={3} x={0} width={width} y={scaleY(0)} />
       </svg>
     </Max>
   );
