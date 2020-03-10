@@ -1,7 +1,5 @@
 # Ledger app
 
-Created in around 5 hours on 09/03/2020.
-
 ## Todo (a fair amount!)
 
 - Add e2e tests for critical flows
